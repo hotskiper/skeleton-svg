@@ -1,0 +1,5 @@
+svg {
+  background: #eee; }
+  svg rect {
+    fill: #fff;
+    padding: 100px; }
