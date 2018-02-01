@@ -28,6 +28,6 @@ gulp.task('browser-sync',function(){
     })
 });
 gulp.task('default',function(){
-    gulp.run('browser-sync','sass','html','watch');
+    gulp.run('browser-sync','watch');
 })
 

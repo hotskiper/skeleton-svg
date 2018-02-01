@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="container">
+    <div class="placeholder-bg">
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <rect style='fill:url(#white_grey)' width='300' height='100'>
-                <!-- <animate attributeType='XML'
-                attributeName='width'             
-                from='100' to='300'
-                dur='10s'
-                repeatCount='indefinite'/> -->
-            </rect>
             <defs>
-                <linearGradient id="white_grey" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset='0%' style='stop-color:white;stop-opacity:1'></stop>
-                    <stop offset='20%' style='stop-color:#eee;stop-opacity:1'></stop>
-                    <stop offset='40%' style='stop-color:white;stop-opacity:1'></stop>
-                </linearGradient>
+                <mask id="mask">
+                    <rect width="100%" height="100%" fill="white"></rect>
+                    <!-- 根据需求添加修改蒙版矩形 -->
+                    <rect x="10" y="10" width="200" height="20" fill="black"></rect>
+                    <rect x="220" y="10" width="150" height="20" fill="black"></rect>
+                    <rect x="10" y="60" width="100" height="20" fill="black"></rect>
+                    <rect x="10" y="90" width="200" height="20" fill="black"></rect>
+                    <rect x="220" y="60" width="100" height="20" fill="black"></rect>
+                    <rect x="220" y="90" width="200" height="20" fill="black"></rect>
+                    <rect x="10" y="125" width="300" height="20" fill="black"></rect>
+                    <rect x="10" y="155" width="300" height="20" fill="black"></rect>
+                </mask>
             </defs>
+            <rect width="100%" height="100%" mask="url(#mask)" fill="white"></rect>
+            <!-- 根据需求添加不需要动态效果的边框部分 -->
+            <rect x="0" y="40" width="100%" height="5" fill="#f4f8f9"></rect>
         </svg>
     </div>
     

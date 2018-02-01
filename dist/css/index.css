@@ -1,2 +1,12 @@
-svg {
-  background: #eee; }
+@keyframes loadingif {
+  0% {
+    background-position: -900px 0; }
+  100% {
+    background-position: 900px 0; } }
+
+.placeholder-bg {
+  width: 900px;
+  height: 200px;
+  border: 3px solid #f4f8f9;
+  background: linear-gradient(to right, #f4f8f9 5%, #eee 15%, #f4f8f9 30%);
+  animation: loadingif 5s linear infinite; }

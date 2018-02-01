@@ -1,7 +1,17 @@
-svg{
-    background: #eee;
-    rect{
-        
-        
+$loadingWidth : 900px; 
+$loadingHeight : 200px;
+@keyframes loadingif{
+    0%{
+        background-position: -$loadingWidth 0;
     }
+    100%{
+        background-position: $loadingWidth 0;
+    }
+}
+.placeholder-bg{
+    width: $loadingWidth;
+    height: $loadingHeight;
+    border: 3px solid #f4f8f9;
+    background: linear-gradient(to right,#f4f8f9 5%,#eee 15%,#f4f8f9 30%);
+    animation: loadingif 5s linear infinite;
 }
